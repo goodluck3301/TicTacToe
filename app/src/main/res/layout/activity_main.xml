@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:background="@color/purple_backgroun"
+
+    >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:shadowColor="@color/pink_red"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="30"
+        android:text="Tic\nTac\nToe"
+        android:textColor="@color/yellow"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/player_name"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="-25dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_1"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="editText,x_player"
+        app:flow_horizontalGap="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        app:flow_horizontalStyle="packed"
+        android:paddingEnd="8dp"
+        android:background="@color/dark_purple"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="24dp"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/edittext_background"
+        android:hint="@string/player1"
+        android:paddingLeft="20dp" />
+
+    <ImageView
+        android:id="@+id/x_player"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/x"
+
+        />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_2"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="editText2,o_player,"
+        app:flow_horizontalGap="8dp"
+        android:background="@color/dark_purple"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:paddingEnd="8dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/flow_1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext_background"
+        android:hint="@string/player2"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+
+        />
+    <ImageView
+        android:id="@+id/o_player"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/o"
+        />
+
+
+    <Button
+        android:id="@+id/start_game"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background"
+        android:text="@string/start"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@+id/flow_3"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="x_play,minus_score1,x_score,"
+        app:flow_horizontalGap="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        app:flow_horizontalStyle="packed" />
+    <ImageView
+        android:id="@+id/x_play"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="@drawable/x"
+        />
+    <TextView
+        android:id="@+id/minus_score1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=" - "
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/x_score"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="35dp"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="o_play,minus_score,o_score,"
+        app:flow_horizontalGap="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/flow_3" />
+    <ImageView
+        android:id="@+id/o_play"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="@drawable/o"
+        />
+    <TextView
+        android:id="@+id/minus_score"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=" - "
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/o_score"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="0"
+        android:textSize="35dp"
+        android:textColor="@color/pink_red"
+        android:textStyle="bold"
+        />
+
+    <!-- activity_playgame
+            textView2  textView flow_1 flow_2 start_game
+    -->
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_start_game"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="start_game,"
+        app:flow_horizontalGap="8dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="textView2,textView, flow_1, flow_2, flow_start_game,flow_3,flow_4,"
+        app:flow_horizontalGap="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_game"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
