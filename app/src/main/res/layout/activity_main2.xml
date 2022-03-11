@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_purple"
-    tools:context=".SecondActivity">
-
+    tools:context=".MainActivity2">
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/dark_purple"
         android:orientation="horizontal"
         app:constraint_referenced_ids="back"
         android:layout_marginTop="8dp"
