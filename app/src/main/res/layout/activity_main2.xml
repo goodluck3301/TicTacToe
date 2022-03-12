@@ -113,8 +113,8 @@
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/board"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
         android:background="@drawable/board_background"
         android:orientation="vertical"
         app:constraint_referenced_ids="row1,row2,row3"
@@ -138,19 +138,19 @@
         android:id="@+id/row1_col1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
     />
     <Button
         android:id="@+id/row1_col2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
     <Button
         android:id="@+id/row1_col3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
 
     <androidx.constraintlayout.helper.widget.Flow
@@ -166,19 +166,19 @@
         android:id="@+id/row2_col1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
     <Button
         android:id="@+id/row2_col2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
     <Button
         android:id="@+id/row2_col3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
 
     <androidx.constraintlayout.helper.widget.Flow
@@ -194,19 +194,19 @@
         android:id="@+id/row3_col1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
     <Button
         android:id="@+id/row3_col2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
     <Button
         android:id="@+id/row3_col3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:backgroundTint="@color/dark_purple"
+        android:background="@color/dark_purple"
         />
 
 
