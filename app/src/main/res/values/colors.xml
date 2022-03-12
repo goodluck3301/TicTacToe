@@ -15,4 +15,5 @@
     <color name="red_light">#eb1751</color>
     <color name="light_blue">#0099cb</color>
     <color name="dark_purple">#1c1b4d</color>
+    <color name="board_background">#6648c3</color>
 </resources>

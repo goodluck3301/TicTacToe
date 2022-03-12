@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/drawable-v24/button_background.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/drawable/board_background.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/drawable/col_background.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/layout/activity_main2.xml" value="0.3625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToegame/app/src/main/res/layout/activity_second.xml" value="0.1" />
       </map>

@@ -4,31 +4,212 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_purple"
+    android:background="@color/purple_backgroun"
     tools:context=".MainActivity2">
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:constraint_referenced_ids="back"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="back_flow,flow_2,"
+        app:flow_verticalGap="16dp"
         app:flow_horizontalGap="0dp"
         app:flow_horizontalStyle="packed"
-        android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/back_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="back"
+        app:flow_horizontalGap="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/flow_1"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/flow_1"
+        app:layout_constraintTop_toBottomOf="@+id/flow_1"
+        tools:layout_editor_absoluteY="8dp" />
 
     <ImageView
         android:id="@+id/back"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="?attr/actionModeCloseDrawable"
-        android:backgroundTint="@color/purple_500"
-        app:layout_constraintStart_toStartOf="@id/flow_1"
-        app:layout_constraintTop_toTopOf="@id/flow_1" />
+        android:backgroundTint="@color/light_blue"
+        app:layout_constraintEnd_toStartOf="@+id/flow_1"
+
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="steps,player_names"
+        app:flow_horizontalGap="0dp"
+        app:flow_verticalGap="0dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/steps"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:flow_horizontalGap="128dp"
+        app:constraint_referenced_ids="player_one, player_two"
+
+        />
+
+    <ImageView
+        android:id="@+id/player_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/x"
+
+        />
+    <ImageView
+        android:id="@+id/player_two"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/o"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/player_names"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:flow_horizontalGap="128dp"
+        app:constraint_referenced_ids="player_one_name,player_two_name"
+
+        />
+
+    <TextView
+        android:id="@+id/player_one_name"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Player 1"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <TextView
+        android:id="@+id/player_two_name"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Player 2"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/board"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@drawable/board_background"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="row1,row2,row3"
+        app:flow_horizontalGap="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow_1"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:flow_horizontalGap="5dp"
+        app:constraint_referenced_ids="row1_col1,row1_col2,row1_col3"
+
+        />
+    <Button
+        android:id="@+id/row1_col1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+    />
+    <Button
+        android:id="@+id/row1_col2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+    <Button
+        android:id="@+id/row1_col3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:flow_horizontalGap="5dp"
+        app:constraint_referenced_ids="row2_col1,row2_col2,row2_col3"
+
+        />
+    <Button
+        android:id="@+id/row2_col1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+    <Button
+        android:id="@+id/row2_col2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+    <Button
+        android:id="@+id/row2_col3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:flow_horizontalGap="5dp"
+        app:constraint_referenced_ids="row3_col1,row3_col2,row3_col3"
+
+        />
+    <Button
+        android:id="@+id/row3_col1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+    <Button
+        android:id="@+id/row3_col2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+    <Button
+        android:id="@+id/row3_col3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_purple"
+        />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
