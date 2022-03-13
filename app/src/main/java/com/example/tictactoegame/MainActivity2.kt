@@ -79,8 +79,6 @@ class MainActivity2 : AppCompatActivity() {
         if (p2 != null)
             player2.text = p2.getString("p_name2").toString()
 
-
-
         val player1_message = Toast.makeText(applicationContext, "${player1.text} Win", Toast.LENGTH_LONG)
         val player2_message = Toast.makeText(applicationContext, "${player2.text} Win", Toast.LENGTH_LONG)
         val nobody_win      = Toast.makeText(applicationContext, "Win Nobody", Toast.LENGTH_LONG)
@@ -112,10 +110,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
 
@@ -156,10 +159,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
@@ -200,10 +208,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
@@ -245,10 +258,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
@@ -288,10 +306,15 @@ class MainActivity2 : AppCompatActivity() {
                             true -> {
                                 x_score++
                                 player1_message.show()
-                                reset_game() }
+                                reset_game()
+                                player1.background = getDrawable(R.drawable.board_background)
+                                player2.background = null
+                            }
                             null -> {
                                 nobody_win.show()
                                 reset_game()
+                                player1.background = getDrawable(R.drawable.board_background)
+                                player2.background = null
                             }
                         }
                     }
@@ -330,12 +353,17 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
-                            o_score++
+                            x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
@@ -378,10 +406,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
@@ -421,10 +454,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
@@ -465,10 +503,15 @@ class MainActivity2 : AppCompatActivity() {
                         true -> {
                             x_score++
                             player1_message.show()
-                            reset_game() }
+                            reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
+                        }
                         null -> {
                             nobody_win.show()
                             reset_game()
+                            player1.background = getDrawable(R.drawable.board_background)
+                            player2.background = null
                         }
                     }
                 }
