@@ -45,8 +45,6 @@ class MainActivity2 : AppCompatActivity() {
                 0,0,0, //row 2
                 0,0,0) //row 3
 
-
-
         fun reset_game() {
             row1_col1.background = getColor(R.color.dark_purple).toDrawable()
             row1_col2.background = getColor(R.color.dark_purple).toDrawable()
@@ -60,16 +58,21 @@ class MainActivity2 : AppCompatActivity() {
             row3_col2.background = getColor(R.color.dark_purple).toDrawable()
             row3_col3.background = getColor(R.color.dark_purple).toDrawable()
 
-            val new_arr: Array<Int> = arrayOf(0,0,0, 0,0,0, 0,0,0)
+            val new_arr: Array<Int> = arrayOf(
+                0,0,0,
+                0,0,0,
+                0,0,0)
+
             board_array =  new_arr
         }//reset game
-
-
 
         val intent = Intent(this, MainActivity::class.java)
 
         val p1 = getIntent().extras
         val p2 = getIntent().extras
+
+        player1.text = "Player 1"
+        player2.text = "Player 2"
 
         if (p1 != null)
             player1.text = p1.getString("p_name1").toString()
@@ -81,13 +84,16 @@ class MainActivity2 : AppCompatActivity() {
         val player1_message = Toast.makeText(applicationContext, "${player1.text} Win", Toast.LENGTH_LONG)
         val player2_message = Toast.makeText(applicationContext, "${player2.text} Win", Toast.LENGTH_LONG)
         val nobody_win      = Toast.makeText(applicationContext, "Win Nobody", Toast.LENGTH_LONG)
-////
+
+        var x_score = 0
+        var o_score = 0
+
         back.setOnClickListener{
 
-            startActivityForResult(intent,2000)
+            intent.putExtra("x_score",x_score.toString())
+            intent.putExtra("o_score",o_score.toString())
 
-
-
+            startActivityForResult(intent,1000)
         }// back button
 
 //row 1
@@ -104,6 +110,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -122,6 +129,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -146,6 +154,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -164,6 +173,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -188,6 +198,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -205,6 +216,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -231,6 +243,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -248,6 +261,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -272,6 +286,7 @@ class MainActivity2 : AppCompatActivity() {
 
                         when(find_winer(board_array,1)){
                             true -> {
+                                x_score++
                                 player1_message.show()
                                 reset_game() }
                             null -> {
@@ -289,6 +304,7 @@ class MainActivity2 : AppCompatActivity() {
 
                         when(find_winer(board_array,2)){
                             true -> {
+                                o_score++
                                 player2_message.show()
                                 reset_game()
                             }
@@ -314,6 +330,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            o_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -331,6 +348,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -358,9 +376,13 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
-                        null -> {reset_game()}
+                        null -> {
+                            nobody_win.show()
+                            reset_game()
+                        }
                     }
                 }
                 false -> {
@@ -372,6 +394,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -396,6 +419,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -413,6 +437,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
@@ -438,6 +463,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,1)){
                         true -> {
+                            x_score++
                             player1_message.show()
                             reset_game() }
                         null -> {
@@ -455,6 +481,7 @@ class MainActivity2 : AppCompatActivity() {
 
                     when(find_winer(board_array,2)){
                         true -> {
+                            o_score++
                             player2_message.show()
                             reset_game()
                         }
